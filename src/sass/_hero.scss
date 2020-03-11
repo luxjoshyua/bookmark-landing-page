@@ -1,0 +1,36 @@
+nav {
+    padding-top: 32px;
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        padding: 12px 20px;
+        margin: 0 auto;
+
+
+        .left {
+            img {
+                padding-top: 16px;
+            }
+        }
+
+        .right {
+            a {
+                display: inline-block;
+                padding-right: 40px; 
+                text-transform: uppercase;
+            }
+            .btn {
+                color: white;
+                background-color: #fb5859;
+                border-radius: 8px;
+                box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.048);
+                padding: 14px 40px;
+                text-align: center;
+
+            }
+
+        }
+
+    }
+}
