@@ -21,49 +21,121 @@
 
             h1 {
                 font-size: 32px;
-                font-weight: 700;
+                font-weight: 500;
                 color: black;
                 padding-bottom: 14px;
             }
         }
-        .links {     
+
+        .links {
             display: flex;
             justify-content: space-between;
             align-items: center;
             max-width: 740px;
             margin: 0 auto;
-            
+
             .link {
                 padding-bottom: 22px;
-                border-bottom: 2px solid #eee;
+                border-bottom: 2px solid $grey;
 
                 span {
                     font-weight: 500;
                 }
 
                 &.active {
-                    border-bottom: 4px solid #fb5859;;
+                    border-bottom: 3px solid $red;
                 }
             }
         }
+
         .link-items {
+            margin-top: 64px;
+            position: relative;
+
             .item {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: all .5s;
+
                 .inner {
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: center;
+                    align-items: center;
+
                     .img-outer {
-
-                        
+                        width: 100%;
+                        height: 100%;
                     }
+
                     .text {
+                        text-align: left;
 
+                        h1 {
+                            font-size: 32px;
+                            font-weight: 500;
+                        }
+
+                        .button {
+                            background-color: $blue;
+                            color: $white;
+                            text-transform: capitalize;
+                        }
                     }
                 }
-                &.item__two {
-                    display: none;
+
+                &.item__one {
+                    opacity: 0;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 80px;
+                        left: -190px;
+                        background-color: #4c60d0;
+                        border-top-right-radius: 140px;
+                        border-bottom-right-radius: 140px;
+                        min-width: 600px;
+                        min-height: 360px;
+                    }
                 }
+
+                &.item__two {
+                    opacity: 0;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 170px;
+                        right: -120px;
+                        background-color: #4c60d0;
+                        border-top-left-radius: 140px;
+                        border-bottom-left-radius: 140px;
+                        min-width: 420px;
+                        min-height: 300px;
+                    }
+
+                    .inner {
+                        flex-direction: row-reverse;
+                    }
+                }
+
                 &.item__three {
-                    display: none;
+                    opacity: 0;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 100px;
+                        left: -190px;
+                        background-color: #4c60d0;
+                        border-top-right-radius: 140px;
+                        border-bottom-right-radius: 140px;
+                        min-width: 480px;
+                        min-height: 320px;
+                    }
+
+
                 }
             }
         }
