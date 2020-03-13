@@ -1,17 +1,13 @@
 .chapter {
     position: relative;
+    padding: 80px 0;
 
     .inner {
         position: relative;
         max-width: 1200px;
-        padding: 0 14px;
+        padding: 0 24px;
         margin: 0 auto;
-    }
-}
 
-
-.features {
-    .inner {
         .text {
             max-width: 730px;
             width: 100%;
@@ -26,7 +22,12 @@
                 padding-bottom: 14px;
             }
         }
+    }
+}
 
+
+.features {
+    .inner {
         .links {
             display: flex;
             justify-content: space-between;
@@ -72,7 +73,7 @@
                         text-align: left;
 
                         h1 {
-                            font-size: 32px;
+                            font-size: 30px;
                             font-weight: 500;
                         }
 
@@ -134,10 +135,64 @@
                         min-width: 480px;
                         min-height: 320px;
                     }
-
-
                 }
             }
         }
+    }
+}
+
+.extensions {
+    margin-top: 80vh;
+
+    .extensions-wrapper {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-around;
+
+        .extension {
+            box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.048);
+            margin-right: 16px;
+            max-width: 310px;
+            border-radius: 4px;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                justify-content: center;
+                align-items: center;
+                padding: 24px 64px 12px;
+
+                img {
+                    padding-bottom: 22px;
+                }
+
+                .browser {
+                    font-weight: 500;
+                    color: black;
+                    margin: 0;
+                }
+
+                .version {
+                    font-size: 12px;
+                    margin: 0;
+                }
+            }
+
+            .cta {
+                width: 100%;
+
+                .button {
+                    background-color: $blue;
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 12px 32px;
+                }
+            }
+
+        }
+
     }
 }

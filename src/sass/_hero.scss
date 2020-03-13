@@ -6,7 +6,7 @@ nav {
         justify-content: space-between;
         max-width: 1200px;
         margin: 0 auto;
-
+        padding: 0 24px;
 
         .left {
             img {
@@ -54,9 +54,10 @@ nav {
         }
 
         .text {
+            text-align: left;
             h1 {
-                font-size: 54px;
-                line-height: 64px;
+                font-size: 52px;
+                line-height: 62px;
                 font-weight: 700;
                 color: black;
             }
