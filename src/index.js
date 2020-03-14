@@ -1,6 +1,6 @@
 import style from "./sass/index.scss";
 
-
+// panels
 const bookmarkingLink = document.getElementById('bookmarking');
 const speedyLink = document.getElementById('speedy');
 const sharingLink = document.getElementById('sharing');
@@ -38,3 +38,24 @@ sharingLink.addEventListener('click', e => {
     itemTwo.classList.remove('active');
     itemThree.classList.toggle('active');
 });
+
+
+
+// accordions
+const accordions = document.getElementsByClassName('accordion');
+
+for (let index = 0; index < accordions.length; index++) {
+    const currentAccordion = accordions[index];
+    currentAccordion.addEventListener('click', e => {
+        // console.log(e);
+        currentAccordion.classList.toggle('active-accordion');
+        // toggle hide show active panel
+        const panel = currentAccordion.nextElementSibling;
+        
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    })
+}
