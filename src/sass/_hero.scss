@@ -23,11 +23,17 @@ nav {
 
             .button {
                 color: white;
-                background-color: #fb5859;
+                background-color: $red;
                 border-radius: 8px;
                 box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.048);
-                padding: 14px 40px;
+                padding: 6px 22px;
                 text-align: center;
+                &:hover {
+                    cursor: pointer;
+                    color: $red;
+                    border: 1px solid $red;
+                    transition: all .2s;
+                }
             }
         }
     }
@@ -45,8 +51,8 @@ nav {
             content: "";
             position: absolute;
             top: 140px;
-            right: -60px;
-            background-color: #4c60d0;
+            right: 0;
+            background-color: $blue;
             border-top-left-radius: 140px;
             border-bottom-left-radius: 140px;
             min-width: 400px;
@@ -55,6 +61,7 @@ nav {
 
         .text {
             text-align: left;
+            padding: 0 16px 0 0;
             h1 {
                 font-size: 52px;
                 line-height: 62px;

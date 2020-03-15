@@ -59,3 +59,29 @@ for (let index = 0; index < accordions.length; index++) {
         }
     })
 }
+
+
+const submitBtn = document.querySelector('.contact-us');
+submitBtn.addEventListener('click', e => {
+    validateEmail();
+    e.preventDefault();
+})
+
+function validateEmail() {
+    const emailInput = document.getElementById('email');
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (!emailRegex.test(emailInput.value)) {
+        console.log("Email is invalid")
+
+        const errorDiv = document.createElement('div');
+        document.querySelector('.signup').appendChild(errorDiv);
+        errorDiv.innerHTML = "Woops, make sure it's an email please!";
+        errorDiv.classList.add('email-error');
+        emailInput.style.border = "1px solid #fb5859";
+
+    } else {
+        console.log("Email is correct!")
+    }
+}
+
