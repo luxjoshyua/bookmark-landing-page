@@ -1,6 +1,9 @@
 .chapter {
     position: relative;
     padding: 80px 0;
+    @include sm {
+        padding: 60px 0;
+    }
 
     .inner {
         position: relative;
@@ -14,6 +17,9 @@
             margin: 0 auto;
             text-align: center;
             padding: 0 96px 32px;
+            @include sm {
+                padding: 0 16px;
+            }
 
             h1 {
                 font-size: 32px;
@@ -33,10 +39,26 @@
             align-items: center;
             max-width: 740px;
             margin: 0 auto;
+            @include sm {
+                flex-direction: column;
+                justify-content: center;
+            }
 
             .link {
                 padding-bottom: 22px;
                 border-bottom: 2px solid $grey;
+                @include sm {
+                    width: 100%;
+                    text-align: center;
+                    padding-bottom: 12px;
+                    margin-bottom: 12px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: $red;
+                    transition: all .25s;
+                }
 
                 span {
                     font-weight: 500;
@@ -76,10 +98,23 @@
                             font-weight: 500;
                         }
 
-                        .button {
-                            background-color: $blue;
-                            color: $white;
-                            text-transform: capitalize;
+                        .btn-wrapper {
+                            width: fit-content;
+                            margin-right: auto;
+
+                            .button {
+                                background-color: $blue;
+                                color: $white;
+                                text-transform: capitalize;
+
+                                &:hover {
+                                    cursor: pointer;
+                                    transition: all .25s;
+                                    color: $blue;
+                                    border: 1px solid $blue;
+                                    background-color: white;
+                                }
+                            }
                         }
                     }
                 }
@@ -203,7 +238,7 @@
                         background-color: white;
                         color: $blue;
                         border: 1px solid $blue;
-                        transition: all .3s;
+                        transition: all .25s;
                     }
                 }
             }
@@ -244,7 +279,7 @@
             padding: 6px 18px;
             overflow: hidden;
             max-height: 0;
-            transition: max-height 0.2s ease-out;
+            transition: max-height 0.25s ease-out;
         }
 
         // .active-accordion,
@@ -275,12 +310,13 @@
             background-color: $blue;
             color: $white;
             padding: 5px 16px;
+
             &:hover {
                 cursor: pointer;
                 background-color: white;
                 color: $blue;
                 border: 1px solid $blue;
-                transition: all .2s;
+                transition: all .25s;
             }
         }
     }
@@ -370,7 +406,7 @@
             }
 
             a {
-                font-size: 14px;
+                font-size: 12px;
                 color: white;
 
                 &:hover {

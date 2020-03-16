@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 @import "media-queries";
 @import "variables";
 @import "utilities";
 @import "fonts";
 @import "sections";
 @import "hero";
-
 
 
 html,
@@ -18,7 +18,8 @@ body {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     font-size: 16px;
     line-height: 26px;
     color: $grey;
