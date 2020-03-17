@@ -23,6 +23,7 @@
 
             h1 {
                 font-size: 32px;
+                line-height: 40px;
                 font-weight: 500;
                 color: black;
                 padding-bottom: 14px;
@@ -32,7 +33,13 @@
 }
 
 .features {
+    
     .inner {
+        .text {
+            @include sm {
+                padding: 0 12px 12px;
+            }
+        }
         .links {
             display: flex;
             justify-content: space-between;
@@ -84,23 +91,45 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    @include sm {
+                        flex-direction: column;
+                        padding: 0;
+                    }
 
                     .img-outer {
                         width: 100%;
                         height: 100%;
+                        @include sm {
+                            padding-bottom: 64px;
+                        }
+                        img {
+                            @include sm {
+                                max-width: 100%;
+                            }
+                        }
                     }
 
                     .text {
                         text-align: left;
+                        @include sm {
+                            text-align: center;
+                        }
 
                         h1 {
                             font-size: 30px;
                             font-weight: 500;
+                            @include sm {
+                                font-size: 28px;
+                                padding-bottom: 6px;
+                            }
                         }
 
                         .btn-wrapper {
                             width: fit-content;
                             margin-right: auto;
+                            @include sm {
+                                margin: 0 auto;
+                            }
 
                             .button {
                                 background-color: $blue;
@@ -132,6 +161,11 @@
                         border-bottom-right-radius: 140px;
                         min-width: 600px;
                         min-height: 360px;
+                        @include sm {
+                            top: 110px;
+                            min-width: 340px;
+                            min-height: 140px;
+                        }
                     }
                 }
 
@@ -148,10 +182,23 @@
                         border-bottom-left-radius: 140px;
                         min-width: 420px;
                         min-height: 300px;
+                        @include sm {
+                            min-width: 260px;
+                            min-height: 240px;
+                            top: 290px;
+                        }
                     }
 
                     .inner {
                         flex-direction: row-reverse;
+                        @include sm {
+                            flex-direction: column-reverse;
+                        }
+                        .text {
+                            @include sm {
+                                padding-bottom: 20px;
+                            }
+                        }
                     }
                 }
 
@@ -168,6 +215,12 @@
                         border-bottom-right-radius: 140px;
                         min-width: 480px;
                         min-height: 320px;
+                        @include sm {
+                            top: 60px;
+                            left: 30px;
+                            min-width: 320px;
+                            min-height: 260px;
+                        }
                     }
                 }
             }
@@ -177,11 +230,27 @@
 
 .extensions {
     margin-top: 60vh;
+    @include sm {
+        margin-top: 80vh;
+    }
+    .inner {
+        .text {
+            h1 {
+                @include sm {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
 
     .extensions-wrapper {
         margin-top: 32px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        @include sm {
+            flex-direction: column;
+        }
 
         .extension {
             box-shadow: 0px 2px 11px 11px rgba(2, 0, 0, 0.07);
@@ -189,13 +258,22 @@
             max-width: 310px;
             max-height: 320px;
             border-radius: 4px;
+            @include sm {
+                margin-right: 0;
+            }
 
             &:nth-of-type(2) {
                 margin-top: 32px;
+                @include sm {
+                    margin-top: 32px;
+                }
             }
 
             &:nth-of-type(3) {
                 margin-top: 64px;
+                @include sm {
+                    margin-top: 32px;
+                }
             }
 
             .content {
@@ -262,6 +340,9 @@
             outline: none;
             border-bottom: 1px solid $grey;
             transition: 0.5s;
+            @include sm {
+                padding: 12px;
+            }
 
             &:after {
                 content: "";
@@ -345,11 +426,22 @@
             .signup {
                 padding-top: 26px;
 
+                @include sm {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
                 input {
                     min-width: 260px;
                     border-radius: 4px;
                     margin-right: 14px;
                     padding: 10px;
+                    @include sm {
+                        margin-right: 0;
+                        margin-bottom: 12px;
+                    }
 
                     &:focus {
                         outline: none;
@@ -374,6 +466,11 @@
                 .button {
                     background-color: $red;
                     color: white;
+                    @include sm {
+                        min-width: 260px;
+                        padding: 10px;
+                        line-height: 14px;
+                    }
 
                     &:hover {
                         background-color: white;
@@ -389,20 +486,33 @@
 
 
 .footer {
-    background-color: navy;
+    background-color: #242946; 
     padding: 40px 0;
 
     .inner {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @include sm {
+            justify-content: center;
+            flex-direction: column;
+        }
 
         .left {
             display: flex;
+            @include sm {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
 
             img,
             a {
                 padding-right: 60px;
+                @include sm {
+                    padding-right: 0;
+                    padding-bottom: 20px;
+                }
             }
 
             a {
@@ -422,6 +532,10 @@
             img {
                 &:first-of-type {
                     padding-right: 40px;
+                    @include sm {
+                        padding-right: 26px;
+                        margin-top: 12px;
+                    }
                 }
             }
         }

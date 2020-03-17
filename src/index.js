@@ -51,7 +51,7 @@ for (let index = 0; index < accordions.length; index++) {
         currentAccordion.classList.toggle('active-accordion');
         // toggle hide show active panel
         const panel = currentAccordion.nextElementSibling;
-        
+
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
         } else {
@@ -60,11 +60,11 @@ for (let index = 0; index < accordions.length; index++) {
     })
 }
 
-
+// Email validator
 const submitBtn = document.querySelector('.contact-us');
 submitBtn.addEventListener('click', e => {
     validateEmail();
-    e.preventDefault();
+    // e.preventDefault();
 })
 
 function validateEmail() {
@@ -72,7 +72,6 @@ function validateEmail() {
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (!emailRegex.test(emailInput.value)) {
-    
         const errorDiv = document.createElement('div');
         document.querySelector('.signup').appendChild(errorDiv);
         errorDiv.innerHTML = "Woops, make sure it's a valid email please!";
@@ -84,3 +83,13 @@ function validateEmail() {
     }
 }
 
+
+// Mobile nav
+const mobileNavOpen = document.querySelector('.right-mobile');
+const mobileNav = document.querySelector('.mobile-navigation');
+
+mobileNavOpen.addEventListener('click', e => {
+    console.log(e)
+    mobileNav.classList.toggle('active-mb');
+
+})
