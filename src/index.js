@@ -87,9 +87,14 @@ function validateEmail() {
 // Mobile nav
 const mobileNavOpen = document.querySelector('.right-mobile');
 const mobileNav = document.querySelector('.mobile-navigation');
+const mobileClose = document.getElementById('close');
 
 mobileNavOpen.addEventListener('click', e => {
-    console.log(e)
     mobileNav.classList.toggle('active-mb');
+}); 
 
+mobileClose.addEventListener('click', e => {
+    
+    mobileNav.classList.toggle('close-mb');
+    
 })
