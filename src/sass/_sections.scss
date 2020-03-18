@@ -103,6 +103,7 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            padding: 32px 0;
                         }
                         @include sm {
                             padding-bottom: 64px;
@@ -173,7 +174,7 @@
                             max-width: 540px;
                         }
                         @include sm {
-                            top: 110px;
+                            top: 360px;
                             min-width: 340px;
                             min-height: 140px;
                         }
@@ -193,16 +194,19 @@
                         border-bottom-left-radius: 140px;
                         min-width: 420px;
                         min-height: 300px;
+                        @include md {
+                            top: 370px;
+                        }
                         @include sm {
-                            min-width: 260px;
-                            min-height: 240px;
-                            top: 290px;
+                            min-width: 240px;
+                            min-height: 190px;
+                            top: 350px;
                         }
                     }
 
                     .inner {
                         flex-direction: row-reverse;
-                        @include sm {
+                        @include md {
                             flex-direction: column-reverse;
                         }
                         .text {
@@ -226,8 +230,12 @@
                         border-bottom-right-radius: 140px;
                         min-width: 480px;
                         min-height: 320px;
+                        @include md {
+                            top: 190px;
+                            right: 0;
+                        }
                         @include sm {
-                            top: 60px;
+                            top: 320px;
                             left: 30px;
                             min-width: 320px;
                             min-height: 260px;
@@ -240,10 +248,8 @@
 }
 
 .extensions {
-    margin-top: 60vh;
-    @include sm {
-        margin-top: 80vh;
-    }
+    margin-top: 80vh;
+
     .inner {
         .text {
             h1 {
@@ -269,6 +275,10 @@
             max-width: 310px;
             max-height: 320px;
             border-radius: 4px;
+            @include md {
+                margin-right: 12px;
+                max-width: 240px;
+            }
             @include sm {
                 margin-right: 0;
             }
@@ -294,6 +304,9 @@
                 justify-content: center;
                 align-items: center;
                 padding: 24px 64px 12px;
+                @include md {
+                    padding: 16px 24px 12px;
+                }
 
                 img {
                     padding-bottom: 22px;
@@ -313,6 +326,9 @@
 
             .cta {
                 width: 100%;
+                .dots {
+                    max-width: 100%;
+                }
 
                 .button {
                     background-color: $blue;
@@ -320,7 +336,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin: 12px 32px;
+                    margin: 12px 26px;
 
                     &:hover {
                         cursor: pointer;

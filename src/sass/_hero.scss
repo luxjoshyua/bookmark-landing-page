@@ -101,7 +101,7 @@ nav {
 
                     a {
                         img {
-                           padding-right: 32px;
+                           padding-right: 16px;
                         }
                     }
                 }
@@ -174,7 +174,7 @@ nav {
             }
 
             @include sm {
-                top: 40px;
+                top: -30px;
                 min-width: 230px;
                 min-height: 190px;
             }
@@ -195,8 +195,8 @@ nav {
                 color: black;
 
                 @include sm {
-                    font-size: 36px;
-                    line-height: 46px;
+                    font-size: 32px;
+                    line-height: 42px;
                 }
             }
 
