@@ -1,5 +1,5 @@
-# Frontend Mentors Arch Studio Challenge
-Challenge available <a href="https://www.frontendmentor.io/challenges/arch-studio-multipage-website-wNIbOFYR6" target="_blank">here.</a>
+# Frontend Mentors Bookmark Landing Page Challenge
+Challenge available <a href="https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158" target="_blank">here.</a>
 
 # Getting started
 
