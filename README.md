@@ -1,4 +1,4 @@
-# Frontend Mentors Rest API Challenge
+# Frontend Mentors Arch Studio Challenge
 Challenge available <a href="https://www.frontendmentor.io/challenges/arch-studio-multipage-website-wNIbOFYR6" target="_blank">here.</a>
 
 # Getting started
